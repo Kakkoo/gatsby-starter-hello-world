@@ -12,7 +12,7 @@ export default function Home({data}) {
   return (
     <div>
       <Layout>
-        <Title text="welcome" />
+        <Title text="Welcome" />
        
        <Link to="/about">Search bar</Link>
         <p>Recent posts are here. Click for detail.</p>
