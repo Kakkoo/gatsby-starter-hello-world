@@ -13,8 +13,9 @@ export default function Home({data}) {
     <div>
       <Layout>
         <Title text="Welcome" />
-       
-       <Link to="/about">Search bar</Link>
+
+        <Link to="/about">Search bar</Link>
+        <Link to="/orderHistory">OrderHistory</Link>
         <p>Recent posts are here. Click for detail.</p>
         <Suspense fallback={<div>still loading...</div>}>
           <ArticleList />

@@ -1,7 +1,7 @@
-import React, { lazy, Suspense } from "react"
+import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-//import Article from "../components/article"
-const Article = lazy(() => import(`../components/article`));
+import Article from "../components/article"
+
 export default () => (
   <StaticQuery
     query={graphql`
@@ -29,7 +29,7 @@ export default () => (
     render={data => (
       <div>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Suspense fallback={<div>Loading...</div>}>
+         
             <Article
               id={node.id}
               to={node.fields.slug}
@@ -38,7 +38,7 @@ export default () => (
               date={node.frontmatter.date}
               excerpt={node.excerpt}
             />
-          </Suspense>
+         
         ))}
       </div>
     )}
